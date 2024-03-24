@@ -38,8 +38,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="279dp"
-        android:layout_height="49dp"
+        android:layout_width="193dp"
+        android:layout_height="63dp"
         android:orientation="vertical"
 
         app:layout_constraintBottom_toTopOf="@id/re_btn"
@@ -99,6 +99,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/backicon"
             android:layout_width="38dp"
             android:layout_height="36dp"
             android:contentDescription="Back Button"
@@ -114,11 +115,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_more" />
 
     </LinearLayout>
 
