@@ -87,36 +87,16 @@
 
 
     <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#9E70A1C8"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
 
-
-        android:padding="12dp"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/backicon"
-            android:layout_width="38dp"
-            android:layout_height="36dp"
-            android:contentDescription="Back Button"
-            android:onClick="ClickMenu"
-            android:src="@drawable/backicon" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="20dp"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/backicon"
+        android:layout_width="38dp"
+        android:layout_height="36dp"
+        android:contentDescription="Back Button"
+        android:onClick="ClickMenu"
+        android:src="@drawable/backicon"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="32dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
