@@ -12,4 +12,8 @@ public class Appointment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
     }
+
+    public byte[] getApp() {
+        return new byte[0];
+    }
 }
