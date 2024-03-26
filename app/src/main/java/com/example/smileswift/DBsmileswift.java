@@ -24,8 +24,8 @@ public class DBsmileswift extends SQLiteOpenHelper {
         private static String T1_Patient= "Patient";
         private static String T2_Appointment= "Appointment";
         private static String T3_Doctor= "Doctor";      //Column//
-        private static String idColumnA="Appointment id";
-        private static String dateColumnA="Appointment Date";
+        private static String idColumnA="Appointment_id";
+        private static String dateColumnA="Appointment_Date";
         private static String idColumnD="Doctor id";
         private static String nameColumnD="Doctor name";
         private static String yearColumnD="Years Of Service";
