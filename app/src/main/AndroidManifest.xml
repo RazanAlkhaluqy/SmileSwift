@@ -19,7 +19,7 @@
             android:name=".reSchedule"
             android:exported="false" />
         <activity
-            android:name=".Add"
+            android:name=".Appointment"
             android:exported="false" />
         <activity
             android:name=".LogOut"
