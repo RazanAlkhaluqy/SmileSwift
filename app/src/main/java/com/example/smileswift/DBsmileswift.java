@@ -8,12 +8,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.text.CollationKey;
-import java.util.concurrent.ExecutionException;
-
 public class DBsmileswift extends SQLiteOpenHelper {
 
         public static final String DBNAME = "smileswift.db";
@@ -42,19 +36,19 @@ public class DBsmileswift extends SQLiteOpenHelper {
                     "(" + COL1 + " TEXT PRIMARY KEY, " + COL2 + " TEXT)");
 
             sqLiteDatabase.execSQL("CREATE TABLE " + T1_Patient +"(" +
-                    idColumnP + " INTEGER PRIMARY KEY autoincrement, " + // PK
-                    nameColumnP + " TEXT" +
+                    idColumnP + " ,INTEGER PRIMARY KEY autoincrement, " + // PK
+                    nameColumnP + " ,TEXT" +
                     ")");
 
             sqLiteDatabase.execSQL("CREATE TABLE " + T2_Appointment +
-                    "(" + idColumnA + " INTEGER PRIMARY KEY autoincrement, " +  // PK
+                    "(" + idColumnA + " ,INTEGER PRIMARY KEY autoincrement, " +  // PK
                     dateColumnA + "String ," +
-                    idColumnD +"INTEGER references ," +T3_Doctor +"(" + idColumnD + ")" + // FK
-                    idColumnP +"INTEGER references" +T1_Patient +"(" + idColumnP + ")"); // FK
+                    idColumnD +", INTEGER references"+T3_Doctor +idColumnD  + // FK
+                    idColumnP +", INTEGER references" +T1_Patient +"(" + idColumnP + ")" ); // FK
 
             sqLiteDatabase.execSQL("CREATE TABLE " + T3_Doctor +
-                    "(" + idColumnD + " INTEGER PRIMARY KEY autoincrement, " + // PK
-                    nameColumnD + " TEXT ," +
+                    "(" + idColumnD + " ,INTEGER PRIMARY KEY autoincrement, " + // PK
+                    nameColumnD + " ,TEXT ," +
                     yearColumnD +" INTEGER " +
                     ")");
         }
@@ -83,17 +77,17 @@ public class DBsmileswift extends SQLiteOpenHelper {
         public Boolean checkUsernamePassword(String username, String password) {
             SQLiteDatabase MyDB = this.getWritableDatabase();
             Cursor cursor = MyDB.rawQuery("SELECT * FROM " + TABLENAME + " WHERE " + COL1 + " = ? AND " + COL2 + " = ?", new String[]{username, password});
-            return cursor.getCount() > 0;
+            return cursor.getCount() >0 ;
         }
    // New Methods :
-        public Boolean Create Appointment(Appointment appointment) {
+        public long Appointment(Appointment appointment) {
            try {
                SQLiteDatabase sqLiteDatabase= getWritableDatabase();
                ContentValues contentValues= new ContentValues();
                contentValues.put(dateColumnA, appointment.getApp());
               return sqLiteDatabase.insert(T2_Appointment, null, contentValues) ;
-           } catch (Exception e){
-               return false;
+           }  finally {
+
            }
     }
 
