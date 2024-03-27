@@ -3,9 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
     android:background="@drawable/total_background">
+
+    <ImageView
+        android:id="@+id/backicon"
+        android:layout_width="38dp"
+        android:layout_height="36dp"
+        android:contentDescription="Back Button"
+        android:onClick="ClickMenu"
+        android:src="@drawable/backicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -18,9 +28,20 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pick a Slot"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/reschedule_slots"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.628"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reschedule_slots"
@@ -38,14 +59,19 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="193dp"
-        android:layout_height="63dp"
+        android:layout_width="236dp"
+        android:layout_height="88dp"
         android:orientation="vertical"
-
         app:layout_constraintBottom_toTopOf="@id/re_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/reschedule_slots">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="previous appointment: " />
 
         <TextView
             android:id="@+id/re_dr_name"
@@ -84,19 +110,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
-    <?xml version="1.0" encoding="utf-8"?>
-
-    <ImageView
-        android:id="@+id/backicon"
-        android:layout_width="38dp"
-        android:layout_height="36dp"
-        android:contentDescription="Back Button"
-        android:onClick="ClickMenu"
-        android:src="@drawable/backicon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="32dp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
