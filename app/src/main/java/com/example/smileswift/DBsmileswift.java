@@ -80,11 +80,11 @@ public class DBsmileswift extends SQLiteOpenHelper {
             return cursor.getCount() >0 ;
         }
    // New Methods :
-        public long Appointment(Appointment appointment) {
+        public <Appointment> long Appointment(Appointment appointment) {
            try {
                SQLiteDatabase sqLiteDatabase= getWritableDatabase();
                ContentValues contentValues= new ContentValues();
-               contentValues.put(dateColumnA, appointment.getApp());
+               contentValues.put(dateColumnA, appointment.getClass().getModifiers());
               return sqLiteDatabase.insert(T2_Appointment, null, contentValues) ;
            }  finally {
 
