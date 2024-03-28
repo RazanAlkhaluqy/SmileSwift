@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<TextView
+    android:id="@+id/availableTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:textSize="18sp"
+    android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="283dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="91dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="630dp"
+        android:text="Available appointment"
+        android:textColor="@android:color/system_accent1_600"
+        android:textSize="27sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="624dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="@android:color/system_accent1_600"
+        android:scrollbarThumbHorizontal="@color/design_default_color_secondary_variant"
+        android:scrollbarThumbVertical="@color/design_default_color_secondary_variant"
+        android:text="Add appointment"
+        android:textColor="#FDFDFD"
+        android:textColorHighlight="#009688"
+        android:textColorHint="#009688"
+        android:textColorLink="#009688"
+        android:textCursorDrawable="@color/material_dynamic_primary30" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="350dp"
+        android:layout_height="72dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="142dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="517dp"
+        android:text="Dr. Mohammad\n Available Time Today: 8-9am"
+        android:textSize="20sp"
+        tools:ignore="DuplicateIds" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="350dp"
+        android:layout_height="77dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="247dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="407dp"
+        android:text="Dr. Ahmad\n Available Time Today: 9-10am"
+        android:textSize="20sp"
+        tools:ignore="DuplicateIds" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="209dp"
+        android:text="Dr. Majed\n Available Time Today: 10-11am"
+        android:textSize="20sp"
+        tools:ignore="DuplicateIds" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="343dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="310dp"
+        android:text="Dr. Sara\n Available Time Today: 3-4pm"
+        android:textSize="20sp"
+        tools:ignore="DuplicateIds" />
+
+
+</RelativeLayout>
