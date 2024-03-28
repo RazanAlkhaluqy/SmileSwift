@@ -115,22 +115,22 @@ public class DBsmileswift extends SQLiteOpenHelper {
     }
     // Method to insert example data into the Doctor table
     public void insertExampleDoctorData() {
-        insertDoctorData("Dr. John Doe", 10);
-        insertDoctorData("Dr. Jane Smith", 5);
+        insertDoctorData("Dr. Ahmad", 10);
+        insertDoctorData("Dr. Razan", 5);
         // Add more example doctor data as needed
     }
 
     // Method to insert example data into the Patient table
     public void insertExamplePatientData() {
-        insertPatientData("John Smith", "password123", "1234567890");
-        insertPatientData("Jane Doe", "abc@123", "9876543210");
+        insertPatientData("Sara", "password123", "0534567890");
+        insertPatientData("Mohamad", "abc@123", "0576543210");
         // Add more example patient data as needed
     }
 
     // Method to insert example data into the Appointment table
     public void insertExampleAppointmentData() {
-        insertAppointmentData("2024-04-01", "Scheduled", 1, 1);
-        insertAppointmentData("2024-04-02", "Confirmed", 2, 2);
+        insertAppointmentData("2024-04-01", "Scheduled", 112233, 332211);
+        insertAppointmentData("2024-04-02", "Confirmed", 221133, 223311);
         // Add more example appointment data as needed
     }
 
