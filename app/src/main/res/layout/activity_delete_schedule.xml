@@ -15,12 +15,14 @@
         android:contentDescription="Back Button"
         android:onClick="ClickMenu"
         android:src="@drawable/backicon"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="37dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
 
     <GridLayout
-        android:layout_width="350dp"
-        android:layout_height="170dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:alignmentMode="alignMargins"
         android:columnCount="2"
         android:columnOrderPreserved="false"
@@ -29,22 +31,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499">
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/my_schedule"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="10dp"
-            app:cardElevation="6dp"
-            app:layout_column="0"
-            app:layout_row="0"
-            app:layout_rowWeight="1">
+            app:cardElevation="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -65,7 +66,7 @@
                     tools:ignore="HardcodedText" />
 
                 <LinearLayout
-                    android:layout_width="376dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -92,14 +93,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:gravity="center"
-            android:orientation="vertical"
-            app:layout_column="1"
-            app:layout_row="0">
+            android:orientation="vertical">
 
             <!-- Add your additional views here -->
 
