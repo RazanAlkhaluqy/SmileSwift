@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="424dp"
-        android:layout_height="178dp"
+        android:layout_width="423dp"
+        android:layout_height="185dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="50dp"
@@ -41,22 +41,35 @@
         android:text="SmileSwift"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="130dp" />
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.199" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
         android:text="log out"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="18dp" />
+        android:textColor="@android:color/system_accent1_600"
+        android:textColorHint="@android:color/system_accent1_600"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/system_accent1_600"
         android:text="Add an appoitment"
         tools:layout_editor_absoluteX="120dp"
         tools:layout_editor_absoluteY="256dp" />
@@ -65,6 +78,7 @@
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/system_accent1_600"
         android:text="View Doctors"
         tools:layout_editor_absoluteX="139dp"
         tools:layout_editor_absoluteY="318dp" />
@@ -73,6 +87,7 @@
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/system_accent1_600"
         android:text="View your reservations"
         tools:layout_editor_absoluteX="108dp"
         tools:layout_editor_absoluteY="375dp" />
