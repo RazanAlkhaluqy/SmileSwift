@@ -11,21 +11,23 @@ public class DBsmileswift extends SQLiteOpenHelper {
 
     // Table1 Patient
     public static final String T1_Patient = "Patient";
+    public static final String idColumnP = "Patient_id";
     public static final String COL1 = "Patient_name";
     public static final String COL2 = "password";
     public static final String numberP = "Patient_Number";
+
 
     // Table2 Appointment
     public static final String T2_Appointment = "Appointment";
     public static final String idColumnA = "Appointment_id";
     public static final String dateColumnA = "Appointment_Date";
     public static final String stateColumnA = "Appointment_State";
-    public static final String idColumnD = "Doctor_id";
-    public static final String idColumnP = "Patient_id";
+    public static final String idColumnDoc = "Doctor_id";
+    public static final String idColumnPat = "Patient_id";
 
     // Table3 Doctor
     public static final String T3_Doctor = "Doctor";
-    public static final String idColumnD_Doc = "Doctor_id";
+    public static final String idColumnD = "Doctor_id";
     public static final String nameColumnD = "Doctor_name";
     public static final String yearColumnD = "Years_Of_Service";
 
@@ -36,24 +38,23 @@ public class DBsmileswift extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + T1_Patient + "(" +
-                idColumnP + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                idColumnP + " INTEGER PRIMARY KEY , " + //Primary key
                 COL1 + " TEXT, " +
                 COL2 + " TEXT, " +
                 numberP + " TEXT)");
 
         sqLiteDatabase.execSQL("CREATE TABLE " + T2_Appointment + "(" +
-                idColumnA + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                dateColumnA + " TEXT, " +
-                stateColumnA + " TEXT, " +
-                idColumnD + " INTEGER, " +
-                idColumnP + " INTEGER, " +
-                "FOREIGN KEY(" + idColumnD + ") REFERENCES " + T3_Doctor + "(" + idColumnD_Doc + "), " +
-                "FOREIGN KEY(" + idColumnP + ") REFERENCES " + T1_Patient + "(" + idColumnP + "))");
+            idColumnA + " INTEGER PRIMARY KEY AUTOINCREMENT, " +  //Primary key
+            dateColumnA + " TEXT, " +
+            stateColumnA + " TEXT, " +
+            "FOREIGN KEY(" + idColumnDoc + ") REFERENCES " + T3_Doctor + "(" + idColumnD+ "), " + // Foreign key
+            "FOREIGN KEY(" + idColumnPat + ") REFERENCES " + T1_Patient + "(" + idColumnP + "))"); // Foreign key
 
         sqLiteDatabase.execSQL("CREATE TABLE " + T3_Doctor + "(" +
-                idColumnD_Doc + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                idColumnD + " INTEGER PRIMARY KEY , " + //Primary key
                 nameColumnD + " TEXT, " +
                 yearColumnD + " INTEGER)");
+
    //***** insert Example data into database *********//
         insertExampleDoctorData();
         insertExamplePatientData();
@@ -67,7 +68,6 @@ public class DBsmileswift extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + T3_Doctor);
         onCreate(sqLiteDatabase);
     }
-
     public boolean insertPatientData(String username, String password, String number) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -83,8 +83,8 @@ public class DBsmileswift extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(dateColumnA, date);
         contentValues.put(stateColumnA, state);
-        contentValues.put(idColumnD, doctorId);
-        contentValues.put(idColumnP, patientId);
+        contentValues.put(idColumnDoc, doctorId); // Corrected column name
+        contentValues.put(idColumnPat, patientId); // Corrected column name
         long result = MyDB.insert(T2_Appointment, null, contentValues);
         return result != -1;
     }
