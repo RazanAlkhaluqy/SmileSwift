@@ -1,0 +1,114 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/total_background">
+
+    <ImageView
+        android:id="@+id/backicon"
+        android:layout_width="38dp"
+        android:layout_height="36dp"
+        android:contentDescription="Back Button"
+        android:onClick="ClickMenu"
+        android:src="@drawable/backicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="reschedule"
+        android:textColor="#3A6A91"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pick a Slot"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/reschedule_slots"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reschedule_slots"
+        android:layout_width="334dp"
+        android:layout_height="314dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:spanCount="3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="236dp"
+        android:layout_height="88dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/re_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reschedule_slots">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="previous appointment: " />
+
+        <TextView
+            android:id="@+id/re_dr_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:text="Dr. Tsunade"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/re_dr_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:text="Today, 03:15 PM"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:background="#000000" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/re_btn"
+        android:layout_width="185dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="44dp"
+        android:padding="10dp"
+        android:text="Update"
+        android:textSize="20dp"
+        app:backgroundTint="#70A1C8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
