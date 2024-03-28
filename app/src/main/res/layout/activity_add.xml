@@ -1,23 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- res/layout/activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".MainActivity">
+    android:scrollbarThumbHorizontal="@color/design_default_color_secondary_variant"
+    android:scrollbarThumbVertical="@color/design_default_color_secondary_variant">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbarThumbHorizontal="@color/design_default_color_secondary_variant"
+        android:scrollbarThumbVertical="@color/design_default_color_secondary_variant" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/showAvailableButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Calender" />
-
-
-</LinearLayout>
+        android:layout_below="@id/calendarView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#009688"
+        android:backgroundTint="#009688"
+        android:scrollbarThumbHorizontal="@color/design_default_color_secondary_variant"
+        android:scrollbarThumbVertical="@color/design_default_color_secondary_variant"
+        android:text="Show Available Appointments"
+        android:textColorHighlight="#009688"
+        android:textColorLink="#009688"
+        android:textCursorDrawable="@color/design_default_color_secondary_variant"
+        app:iconTint="#009688" />
+</RelativeLayout>
