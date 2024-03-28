@@ -234,8 +234,9 @@
         android:layout_marginBottom="44dp"
         android:padding="10dp"
         android:text="Update"
+        android:textColor="#FFFFFF"
         android:textSize="20dp"
-        app:backgroundTint="#70A1C8"
+        app:backgroundTint="@android:color/system_accent1_600"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
