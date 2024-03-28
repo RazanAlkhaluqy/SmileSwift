@@ -11,21 +11,27 @@ import androidx.annotation.Nullable;
 public class DBsmileswift extends SQLiteOpenHelper {
 
         public static final String DBNAME = "smileswift.db";
+
+        public static int dbVersion=1;
+              //  Table1 Patient  //
         public static final String T1_Patient = "Patient";
+        private static String idColumnP="Patient id";
+        public static final String COL1= "Patient name";
+        public static final String COL2 = "password";
+        public static final String numberP = "Patient Number";
 
-        public static int dbVersion=1;              //tables //
-
+               // Table2 Appointment //
         private static String T2_Appointment= "Appointment";
-        private static String T3_Doctor= "Doctor";      //Column//
         private static String idColumnA="Appointment_id";
         private static String dateColumnA="Appointment_Date";
+        private static String stateColumnA="Appointment_State";
+
+             // Table3 Doctor //
+        private static String T3_Doctor= "Doctor";
         private static String idColumnD="Doctor id";
         private static String nameColumnD="Doctor name";
         private static String yearColumnD="Years Of Service";
-        private static String idColumnP="Patient id";
-       public static final String COL1= "Patient name";
-       public static final String COL2 = "password";
-       public static final String numberP = "Patient Number";
+
 
         public DBsmileswift(@Nullable Context context) {
 
