@@ -20,7 +20,7 @@ public class Add extends Activity {
             setContentView(R.layout.activity_main);
 
             calendarView = findViewById(R.id.calendarView);
-            showAvailableButton = findViewById(R.id.showAvailableButton);
+//            showAvailableButton = findViewById(R.id.showAvailableButton);
 
             showAvailableButton.setOnClickListener(new View.OnClickListener() {
                 @Override
