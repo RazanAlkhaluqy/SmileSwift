@@ -25,7 +25,8 @@ android:layout_height="match_parent">
         android:layout_marginBottom="630dp"
         android:text="Available appointment"
         android:textColor="@android:color/system_accent1_600"
-        android:textSize="27sp" />
+        android:textSize="27sp"
+        tools:targetApi="s" />
 
     <Button
         android:id="@+id/button2"
@@ -47,7 +48,8 @@ android:layout_height="match_parent">
         android:textColorHighlight="#009688"
         android:textColorHint="#009688"
         android:textColorLink="#009688"
-        android:textCursorDrawable="@color/material_dynamic_primary30" />
+        android:textCursorDrawable="@color/material_dynamic_primary30"
+        tools:targetApi="s" />
 
     <RadioButton
         android:id="@+id/radioButton"
