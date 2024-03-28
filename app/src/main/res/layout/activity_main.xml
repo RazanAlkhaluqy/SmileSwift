@@ -67,8 +67,8 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="320dp"
-        android:layout_height="66dp"
+        android:layout_width="325dp"
+        android:layout_height="77dp"
         android:backgroundTint="@android:color/system_accent1_600"
         android:text="Add an appoitment"
         android:textSize="30sp"
@@ -88,21 +88,22 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.731" />
+        app:layout_constraintVertical_bias="0.787" />
 
     <Button
         android:id="@+id/button8"
-        android:layout_width="375dp"
-        android:layout_height="69dp"
+        android:layout_width="365dp"
+        android:layout_height="118dp"
         android:backgroundTint="@android:color/system_accent1_600"
         android:text="View your reservations"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
+        app:layout_constraintVertical_bias="0.642" />
 </androidx.constraintlayout.widget.ConstraintLayout>
