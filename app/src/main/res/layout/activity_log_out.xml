@@ -6,4 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".LogOut">
 
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="383dp"
+        android:layout_height="343dp"
+        android:background="@android:color/system_accent1_600"
+        android:text="\n\n    Are you sure you\n     want to log out?"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.235" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="177dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/white"
+        android:scrollbarThumbHorizontal="@color/design_default_color_secondary_variant"
+        android:scrollbarThumbVertical="@color/design_default_color_secondary_variant"
+        android:text="Yes"
+        android:textColor="@android:color/system_accent1_600"
+        android:textColorHighlight="#009688"
+        android:textColorHint="#009688"
+        android:textColorLink="#009688"
+        android:textCursorDrawable="@color/material_dynamic_primary30"
+        android:textSize="27sp"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="332dp"
+        tools:targetApi="s" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
