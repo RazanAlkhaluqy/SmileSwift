@@ -54,17 +54,17 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="49dp"
-        android:layout_height="29dp"
+        android:layout_width="41dp"
+        android:layout_height="34dp"
         android:layout_marginTop="48dp"
         android:background="@android:drawable/ic_menu_search"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="@+id/textView7"
-        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toStartOf="@+id/textView7"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.841" />
+        app:layout_constraintVertical_bias="0.913" />
 
     <TextView
         android:id="@+id/textView8"
@@ -171,18 +171,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.701" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="94dp"
-        android:layout_height="35dp"
-        android:backgroundTint="@android:color/system_accent1_600"
-        android:text="Edit"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button4"
