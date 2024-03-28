@@ -13,18 +13,13 @@
         android:theme="@style/Theme.SmileSwift"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
-            android:name=".updateAppointment"
-=======
-            android:name=".Addclass"
->>>>>>> 823251339b473ee8c447a5056921251a5007c36f
+            android:name=".UpdateAppointmentActivity"
             android:exported="false" />
+
         <activity
             android:name=".DeleteSchedule"
             android:exported="false" />
-        <activity
-            android:name=".reSchedule"
-            android:exported="false" />
+
         <activity
             android:name=".Add"
             android:exported="false" />
@@ -34,6 +29,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
