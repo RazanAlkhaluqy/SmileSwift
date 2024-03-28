@@ -49,6 +49,7 @@ public class DBsmileswift extends SQLiteOpenHelper {
             sqLiteDatabase.execSQL("CREATE TABLE " + T2_Appointment +
                     "(" + idColumnA + " ,INTEGER PRIMARY KEY autoincrement, " +  // PK
                     dateColumnA + "String ," +
+                    stateColumnA + "String ," +
                     idColumnD +", INTEGER references"+T3_Doctor +idColumnD  + // FK
                     idColumnP +", INTEGER references" +T1_Patient +"(" + idColumnP + ")" ); // FK
 
