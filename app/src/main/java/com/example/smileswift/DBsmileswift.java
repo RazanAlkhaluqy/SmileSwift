@@ -54,6 +54,10 @@ public class DBsmileswift extends SQLiteOpenHelper {
                 idColumnD_Doc + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 nameColumnD + " TEXT, " +
                 yearColumnD + " INTEGER)");
+   //***** insert Example data into database *********//
+        insertExampleDoctorData();
+        insertExamplePatientData();
+        insertExampleAppointmentData();
     }
 
     @Override
@@ -109,6 +113,27 @@ public class DBsmileswift extends SQLiteOpenHelper {
         cursor.close();
         return exists;
     }
+    // Method to insert example data into the Doctor table
+    public void insertExampleDoctorData() {
+        insertDoctorData("Dr. John Doe", 10);
+        insertDoctorData("Dr. Jane Smith", 5);
+        // Add more example doctor data as needed
+    }
+
+    // Method to insert example data into the Patient table
+    public void insertExamplePatientData() {
+        insertPatientData("John Smith", "password123", "1234567890");
+        insertPatientData("Jane Doe", "abc@123", "9876543210");
+        // Add more example patient data as needed
+    }
+
+    // Method to insert example data into the Appointment table
+    public void insertExampleAppointmentData() {
+        insertAppointmentData("2024-04-01", "Scheduled", 1, 1);
+        insertAppointmentData("2024-04-02", "Confirmed", 2, 2);
+        // Add more example appointment data as needed
+    }
+
 
 }
 
