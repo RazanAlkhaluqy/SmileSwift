@@ -11,11 +11,10 @@ import androidx.annotation.Nullable;
 public class DBsmileswift extends SQLiteOpenHelper {
 
         public static final String DBNAME = "smileswift.db";
-        public static final String TABLENAME = "user";
-        public static final String COL1 = "username";
-        public static final String COL2 = "password";
+        public static final String T1_Patient = "Patient";
+
         public static int dbVersion=1;              //tables //
-        private static String T1_Patient= "Patient";
+
         private static String T2_Appointment= "Appointment";
         private static String T3_Doctor= "Doctor";      //Column//
         private static String idColumnA="Appointment_id";
@@ -24,7 +23,10 @@ public class DBsmileswift extends SQLiteOpenHelper {
         private static String nameColumnD="Doctor name";
         private static String yearColumnD="Years Of Service";
         private static String idColumnP="Patient id";
-        private static String nameColumnP="Patient name";
+       public static final String COL1= "Patient name";
+       public static final String COL2 = "password";
+       public static final String numberP = "Patient Number";
+
         public DBsmileswift(@Nullable Context context) {
 
             super(context, DBNAME, null, 1);
@@ -32,12 +34,10 @@ public class DBsmileswift extends SQLiteOpenHelper {
 
         @Override
         public void onCreate(SQLiteDatabase sqLiteDatabase) {
-            sqLiteDatabase.execSQL("CREATE TABLE " + TABLENAME +
-                    "(" + COL1 + " TEXT PRIMARY KEY, " + COL2 + " TEXT)");
 
             sqLiteDatabase.execSQL("CREATE TABLE " + T1_Patient +"(" +
-                    idColumnP + " ,INTEGER PRIMARY KEY autoincrement, " + // PK
-                    nameColumnP + " ,TEXT" +
+                    idColumnP + " ,INTEGER PRIMARY KEY, " + // PK
+                     COL1 + ", TEXT , " + COL2 + " TEXT" +
                     ")");
 
             sqLiteDatabase.execSQL("CREATE TABLE " + T2_Appointment +
@@ -55,7 +55,7 @@ public class DBsmileswift extends SQLiteOpenHelper {
 
         @Override
         public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLENAME);
+            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + T1_Patient);
             onCreate(sqLiteDatabase);
         }
 
@@ -64,19 +64,19 @@ public class DBsmileswift extends SQLiteOpenHelper {
             ContentValues contentValues = new ContentValues();
             contentValues.put(COL1, username);
             contentValues.put(COL2, password);
-            long result = MyDB.insert(TABLENAME, null, contentValues);
+            long result = MyDB.insert(T1_Patient, null, contentValues);
             return result != -1;
         }
 
         public Boolean checkUsername(String username) {
             SQLiteDatabase MyDB = this.getWritableDatabase();
-            Cursor cursor = MyDB.rawQuery("SELECT * FROM " + TABLENAME + " WHERE " + COL1 + " = ?", new String[]{username});
+            Cursor cursor = MyDB.rawQuery("SELECT * FROM " + T1_Patient + " WHERE " + COL1 + " = ?", new String[]{username});
             return cursor.getCount() > 0;
         }
 
         public Boolean checkUsernamePassword(String username, String password) {
             SQLiteDatabase MyDB = this.getWritableDatabase();
-            Cursor cursor = MyDB.rawQuery("SELECT * FROM " + TABLENAME + " WHERE " + COL1 + " = ? AND " + COL2 + " = ?", new String[]{username, password});
+            Cursor cursor = MyDB.rawQuery("SELECT * FROM " + T1_Patient + " WHERE " + COL1 + " = ? AND " + COL2 + " = ?", new String[]{username, password});
             return cursor.getCount() >0 ;
         }
    // New Methods :
