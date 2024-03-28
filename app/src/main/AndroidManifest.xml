@@ -15,15 +15,12 @@
         <activity
             android:name=".Available"
             android:exported="false" />
-        <activity
-            android:name=".Addclass"
-            android:exported="false" />
+
+
         <activity
             android:name=".DeleteSchedule"
             android:exported="false" />
-        <activity
-            android:name=".reSchedule"
-            android:exported="false" />
+
         <activity
             android:name=".Add"
             android:exported="false" />
@@ -32,13 +29,15 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"/>
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+
     </application>
 
 </manifest>
