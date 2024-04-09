@@ -19,20 +19,20 @@ public class Add extends Activity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-            calendarView = findViewById(R.id.calendarView);
-//            showAvailableButton = findViewById(R.id.showAvailableButton);
-
-            showAvailableButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    // Retrieve selected date from CalendarView
-                    long selectedDateMillis = calendarView.getDate();
-
-                    // Start AvailableActivity and pass the selected date
-                    Intent intent = new Intent(Add.this, Available.class);
-                    intent.putExtra("selectedDateMillis", selectedDateMillis);
-                    startActivity(intent);
-                }
-            });
+//            calendarView = findViewById(R.id.calendarView);
+////            showAvailableButton = findViewById(R.id.showAvailableButton);
+//
+//            showAvailableButton.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    // Retrieve selected date from CalendarView
+//                    long selectedDateMillis = calendarView.getDate();
+//
+//                    // Start AvailableActivity and pass the selected date
+//                    Intent intent = new Intent(Add.this, Available.class);
+//                    intent.putExtra("selectedDateMillis", selectedDateMillis);
+//                    startActivity(intent);
+//                }
+//            });
         }
     }
